@@ -13,7 +13,7 @@ const viewsPath = path.join(__dirname, '../templates/views')
 const partialsPath = path.join(__dirname, '../templates/partials')
 
 //handelbars engine and views location
-app.set('view engine', 'hbs')
+app.set('view engine', 'hbs') 
 app.set('views', viewsPath)
 hbs.registerPartials(partialsPath)
 
@@ -36,9 +36,9 @@ app.get('/about', (req, res) => {
     })
 })
 
-app.get('/help', (req, res) => {
-    res.render('help', {
-        title: 'Help Page',
+app.get('/contact', (req, res) => {
+    res.render('contact', {
+        title: 'Contact Me',
         name: 'Rabinson Thapa'
     })
 })
@@ -67,13 +67,6 @@ app.get('/weather', (req, res) => {
                 })
             })
         }
-    })
-})
-
-app.get('/help/*', (req, res) => {
-    res.render('404_page', {
-        title: 'Help',
-        message: 'Help article not found'
     })
 })
 
