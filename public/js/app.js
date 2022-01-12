@@ -16,7 +16,7 @@ weatherForm.addEventListener('submit', (e) => {
             } 
             else{
                 messageOne.textContent='Location is '+data.location
-                messageTwo.dangerouslySetInnerHTML=data.weatherForecast
+                messageTwo.textContent=data.weatherForecast
             }            
         })
     })
